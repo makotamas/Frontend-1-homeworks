@@ -1,0 +1,76 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+header {
+    width: 500px; 
+    margin: 0 auto; 
+}
+
+.main-menu {
+    margin: 40px 0;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.main-menu-item {
+    display: inline-block;
+}
+
+.fa-house, .fa-paintbrush, .fa-gear, .fa-user{
+    padding-right: 7px;
+}
+
+.main-menu-item a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: 120px;
+} 
+
+.main-menu-item a:hover{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+main {
+    background-color: rgb(43, 40, 40);
+    width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    
+}
+.fa-clock {
+    padding-right: 20px;
+}
+.created-date {
+    color: grey;
+    margin-top: 5px;
+}
+
+main h1 {
+    margin: 0;
+}
+
+.content-image-container {
+    text-align: center;
+    color: rgb(150, 150, 150);
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(22, 22, 22);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin: 0;
+}

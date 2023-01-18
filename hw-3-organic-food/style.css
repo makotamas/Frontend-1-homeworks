@@ -1,0 +1,283 @@
+/* https://developer.paciellogroup.com/blog/2012/05/html5-accessibility-chops-hidden-and-aria-hidden/ */
+.offscreen {
+  clip-path: inset(100%);
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* font is loaded locally. You can use these fonts in the template */
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-ExtraLight.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Oswald;
+  src: url('./fonts/Oswald/Oswald-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Light.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('./fonts/Lato/Lato-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+body {
+  font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: lightgrey;
+}
+
+header {
+  position: relative;
+}
+
+.header-image-container {
+  height: 45vw;
+  overflow: hidden;
+}
+
+.header-image {
+  width: 100%;
+  filter: brightness(50%);
+}
+
+.header-content {
+  position: absolute;
+  top: 0;
+  color: white;
+  width: 100%;
+}
+
+.fa-clock {
+  margin: 0 2px 0 10px;
+}
+
+.header-article-one {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.menu-checkbox,
+.toggle-label {
+  display: none;
+}
+
+.header-article-one > p, a  {
+  margin: 10px 0;
+}
+
+.header-article-one > a {
+  color: white;
+  text-decoration: none;
+}
+
+.border-container {
+  border-bottom: 1px solid white;
+}
+
+.menu-container{
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.organic-image-container{
+  width: 170px;
+}
+
+.organic-image {
+  width: 100%;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.fa-magnifying-glass {
+  margin-left: 20px;
+}
+
+.header-article-two {
+  width: 80vw;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-image-container{
+  width: 100px;
+  margin: auto;
+}
+
+.banner-image{
+  width: 100%;
+  height: auto;
+}
+
+.continue-to-shopping {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(66, 255, 42, 0.884);
+  padding: 10px 50px;
+  border-radius: 20px;
+  width: 70px;
+  text-align: center;
+}
+
+main {
+  width: 60vw;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.main-article-first > h1, p {
+  text-align: center;
+}
+
+.main-article-first > h1 {
+  font-weight: 200;
+}
+
+.main-article-second {
+  display: flex;
+}
+
+.natural-container {
+  color: darkgreen;
+  background-color: antiquewhite;
+  padding: 20px 20px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.natural-container > h1 {
+  font-weight: 200;
+}
+
+.fa-globe, 
+.fa-repeat,
+.fa-pen {
+  font-size: 60px;
+  color: black;
+}
+
+.footer-image-container {
+  margin-top: 30px;
+  height: 30vw;
+  overflow: hidden;
+}
+
+.footer-image {
+  width: 100%;
+}
+
+footer > p {
+  margin-bottom: 300px;
+}
+
+@media (max-width: 900px) {
+  .header-image-container {
+    height: max-content;
+  }
+
+  .header-image{
+    height: 650px;
+    width: auto;
+  }
+
+  .main-article-second {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .menu  {
+    display: none;
+  }
+
+  .toggle-label {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .header-article-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .continue-to-account {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-container {
+    display: block;
+  }
+
+  .menu-checkbox:checked ~ .menu {
+    display: block; 
+  }
+
+  .menu-item:not(:first-child) {
+    margin-left: 0;
+  }
+}
